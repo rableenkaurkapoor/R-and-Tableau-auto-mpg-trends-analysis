@@ -1,61 +1,153 @@
-
 # R-Tableau-auto-mpg-trends-analysis
 
 This project analyzes how automobile engine characteristics influence fuel efficiency (MPG) using statistical analysis in R and data visualization in Tableau. The workflow begins with statistical exploration and regression analysis in R, followed by visual exploration and dashboard creation in Tableau to communicate insights effectively.
 
 ---
 
-## 1️⃣ Statistical Analysis using R
+# 1️⃣ Statistical Analysis using R
 
 The first stage of this project involved performing statistical analysis in R to understand how engine-related factors impact vehicle fuel efficiency (MPG).
 
 Using the Auto MPG dataset, several engine characteristics were examined, including:
 
-- Horsepower  
-- Weight  
-- Displacement  
-- Cylinders  
-- Model Year  
-- Origin  
+- Horsepower
+- Weight
+- Displacement
+- Cylinders
+- Model Year
+- Origin
 
-### Data Preparation
+---
+
+## Data Preparation
 
 Before conducting statistical analysis, the dataset required preprocessing:
 
-- The **horsepower column contained missing values represented as "?"**
-- Horsepower values were **converted to numeric format**
-- Missing horsepower values were **replaced using the median** to reduce the effect of outliers
+- The horsepower column contained missing values represented as "?"
+- Horsepower values were converted to numeric format
+- Missing horsepower values were replaced using the median to reduce the effect of outliers
 
-### Statistical Analysis in R
+---
+
+## Statistical Analysis in R
 
 Using R, the following analytical steps were performed:
 
-- Exploratory data analysis of the Auto MPG dataset  
-- Summary statistics of engine variables  
-- Linear regression analysis to examine how engine factors influence MPG  
-- Evaluation of relationships between MPG and variables such as horsepower, weight, displacement, cylinders, and model year  
+- Exploratory data analysis of the Auto MPG dataset
+- Summary statistics of engine variables
+- Linear regression analysis to examine how engine factors influence MPG
+- Evaluation of relationships between MPG and variables such as horsepower, weight, displacement, cylinders, and model year
 
 These statistical results provided an analytical understanding of which engine characteristics most strongly influence fuel efficiency.
 
 ---
 
-## 📊 Statistical Outputs (R)
+# 📊 Exploratory Data Analysis Visualizations (R)
 
-Below are selected outputs from the statistical analysis performed in R.
+## Scatter Plot: MPG vs Horsepower
 
-### Regression Output
+<img width="859" height="593" alt="image" src="https://github.com/user-attachments/assets/557d19b0-ef88-4513-b612-7fca043f7ab0" />
 
-<img width="900" alt="Regression Output" src="ADD_R_SCREENSHOT_1">
+**Explanation**
 
-### Statistical Summary
-
-<img width="900" alt="Statistical Summary" src="ADD_R_SCREENSHOT_2">
-
-### Additional Statistical Results
-
-<img width="900" alt="R Analysis Output" src="ADD_R_SCREENSHOT_3">
+· This scatter plot shows the relationship between a car’s horsepower (x-axis) and its fuel efficiency, measured in miles per gallon or MPG (y-axis).  
+· Each dot represents a car from our dataset of 398 vehicles.  
+· The key pattern here is a clear negative correlation: as horsepower increases, MPG generally decreases. In other words, cars with more powerful engines tend to be less fuel-efficient.  
+· For example, cars with lower horsepower-under 100-often achieve over 30 MPG. In contrast, cars above 150 horsepower rarely exceed 20 MPG.  
+· This trend is expected: higher horsepower means the engine uses more fuel to deliver greater performance, which reduces efficiency.  
+· This insight was confirmed through our simple linear regression analysis, where we found that horsepower alone explains a significant portion of the variability in MPG.  
+· Overall, this plot visually supports our finding that horsepower is a strong negative predictor of fuel efficiency.
 
 ---
+
+## Scatter Plot: MPG vs Weight
+
+<img width="859" height="583" alt="image" src="https://github.com/user-attachments/assets/161e1b28-ff8e-46e4-8986-a5d3616d33fe" />
+
+**Explanation**
+
+· This scatter plot shows the relationship between a car’s weight (x-axis) and its fuel efficiency, measured in miles per gallon or MPG (y-axis).  
+· Each point represents a car from our dataset. The overall pattern reveals a strong negative correlation: as weight increases, MPG decreases.  
+· Heavier cars, especially those above 4000 pounds, typically achieve lower MPG-often below 20. In contrast, lighter cars under 2500 pounds frequently exceed 30 or even 40 MPG.  
+· This makes intuitive sense: heavier vehicles require more energy to move, so they consume more fuel and are less efficient.  
+· Among all features we explored, weight is one of the strongest predictors of fuel efficiency. This was confirmed in our regression analysis, where weight had a significant negative impact on MPG.  
+· In summary, the plot highlights that reducing vehicle weight is a key strategy for improving fuel efficiency.
+
+---
+
+## Box Plot: MPG vs Number of Cylinders
+
+<img width="861" height="579" alt="image" src="https://github.com/user-attachments/assets/0e0e3658-251d-42ce-85f0-9a47ed6b33c0" />
+
+**Explanation**
+
+· This boxplot shows how fuel efficiency, measured in miles per gallon (MPG), varies with the number of engine cylinders in each car.
+
+Main Trend:
+
+· Cars with fewer cylinders-especially 4-cylinder engines-have much higher MPG.  
+· The median MPG for 4-cylinder cars is the highest, and there are several very fuel-efficient outliers in this group.  
+· As the number of cylinders increases to 6 or 8, the median MPG drops significantly.  
+· 8-cylinder cars have the lowest MPG and the least variability.  
+
+Key takeaway:
+
+· Fewer cylinders generally mean better fuel efficiency.  
+· This supports the idea that smaller, simpler engines use less fuel.
+
+---
+
+# 📉 Regression Model Diagnostics
+
+## Residual Plot
+
+<img width="1013" height="685" alt="image" src="https://github.com/user-attachments/assets/b2a14563-d150-48f8-86c4-6b73677fb407" />
+
+**Explanation**
+
+· This plot shows the difference between the actual and predicted MPG values for each car in the test set.  
+· Residuals represent the errors between actual and predicted MPG values.  
+· Ideally, residuals should be randomly scattered around the zero line.  
+· Most points are clustered around zero, indicating that the model’s predictions are generally unbiased.  
+· There are some larger residuals where the model underestimates MPG for a few vehicles.  
+
+Summary:
+
+· The residual plot confirms that the regression model provides a reasonable fit for predicting MPG.
+
+---
+
+## Histogram of Residuals
+
+<img width="1013" height="688" alt="image" src="https://github.com/user-attachments/assets/317e3ae2-223e-4520-9296-a6d75f4c130d" />
+
+**Explanation**
+
+· This histogram shows the distribution of residuals from the regression model.  
+· Residuals are the differences between the actual and predicted MPG values.
+
+Interpretation:
+
+· Most residuals are clustered close to zero, meaning the model’s predictions are generally accurate.  
+· The distribution is roughly bell-shaped but slightly skewed to the right.  
+· This suggests the model slightly underestimates MPG for some vehicles.
+
+Summary:
+
+· Overall, the model performs well for most observations, though there are a few outliers.
+
+---
+
+# 📊 Key Statistical Insights
+
+Across all three analyses, several consistent patterns emerge:
+
+- MPG decreases as horsepower increases
+- Heavier vehicles tend to have lower MPG
+- Cars with fewer cylinders achieve higher fuel efficiency
+- Engine size and vehicle weight are key factors affecting fuel consumption
+
+These insights guided the next stage of the project, where Tableau was used to visualize the patterns and create an interactive dashboard.
 
 ## 2️⃣ Data Visualization using Tableau
 
