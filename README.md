@@ -65,6 +65,8 @@ Interactive scatter plots were created to visually explore how different variabl
 
 ### Visualizations Created
 
+https://public.tableau.com/app/profile/rableen.kaur/viz/DASHBOARD-AnalyzingAutomobileEngineImpactonMPG/DASHBOARD-AnalyzingAutomobileEngineImpactonMPG?publish=yes
+
 <img width="784" height="630" alt="image" src="https://github.com/user-attachments/assets/58070359-c54e-4fd8-84ae-73647c10b342" />
 
 
