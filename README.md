@@ -206,3 +206,15 @@ The combined statistical analysis and visualizations reveal several important in
 - **Newer model years tend to have higher MPG**, reflecting improvements in automotive technology and fuel efficiency standards.
 
 Overall, the analysis confirms that **lighter vehicles with smaller engines and newer technology tend to achieve better fuel efficiency.**
+
+## 🛠 Tools Used
+
+- **R Programming (RStudio)** – Performed statistical analysis, exploratory data analysis, and regression modeling to study how automobile engine factors influence MPG.
+
+- **R Libraries (tidyverse, ggplot2, broom, caret)** – Used for data cleaning, visualization, regression modeling, and model evaluation.
+
+- **Tableau** – Created interactive visualizations and dashboard views to explore relationships between MPG and engine characteristics.
+
+- **Auto MPG Dataset** – Used as the primary dataset containing vehicle engine specifications and fuel efficiency data.
+
+- **Statistical Methods** – Linear regression, residual analysis, and exploratory data analysis were used to evaluate relationships between variables.
