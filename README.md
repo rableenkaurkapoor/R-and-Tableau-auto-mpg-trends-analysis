@@ -65,6 +65,9 @@ Interactive scatter plots were created to visually explore how different variabl
 
 ### Visualizations Created
 
+<img width="784" height="630" alt="image" src="https://github.com/user-attachments/assets/58070359-c54e-4fd8-84ae-73647c10b342" />
+
+
 The following visualizations were developed in Tableau:
 
 - Scatter Plot: MPG vs Horsepower  
@@ -80,19 +83,19 @@ These visualizations help clearly reveal patterns between engine features and fu
 
 ### MPG vs Horsepower
 
-<img width="900" alt="MPG vs Horsepower" src="ADD_TABLEAU_IMAGE_1">
+<img width="508" height="619" alt="image" src="https://github.com/user-attachments/assets/48566293-202a-4880-83cf-bad0885db500" />
 
 ### MPG vs Weight
 
-<img width="900" alt="MPG vs Weight" src="ADD_TABLEAU_IMAGE_2">
+<img width="512" height="612" alt="image" src="https://github.com/user-attachments/assets/b09736e6-c3f4-4630-b6e4-d9cda2d31afc" />
 
 ### MPG vs Displacement
 
-<img width="900" alt="MPG vs Displacement" src="ADD_TABLEAU_IMAGE_3">
+<img width="512" height="608" alt="image" src="https://github.com/user-attachments/assets/81aadcd3-cf49-4f6d-8059-71343c249535" />
 
 ### MPG vs Model Year
 
-<img width="900" alt="MPG vs Model Year" src="ADD_TABLEAU_IMAGE_4">
+<img width="508" height="608" alt="image" src="https://github.com/user-attachments/assets/edae74bd-79db-4a94-975d-576981fde455" />
 
 ---
 
