@@ -207,6 +207,8 @@ The combined statistical analysis and visualizations reveal several important in
 
 Overall, the analysis confirms that **lighter vehicles with smaller engines and newer technology tend to achieve better fuel efficiency.**
 
+---
+
 ## 🛠 Tools Used
 
 - **R Programming (RStudio)** – Performed statistical analysis, exploratory data analysis, and regression modeling to study how automobile engine factors influence MPG.
